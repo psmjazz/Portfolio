@@ -61,7 +61,7 @@ Watcher를 통해 발생한 모든 메세지를 엔진
 전송한 메세지를 받아 Subscribe 한 Messenger 들에게 메세지를 전달합니다.
 
 ## 프로젝트 링크
-- Unity : https://github.com/psmjazz/MiniPubSub-Unity/tree/dev/0.1.1/Packages/MiniPubSub
-- Unreal : https://github.com/psmjazz/MiniPubSub-Unreal/tree/dev/0.1.0/Plugins/MiniPubSub
-- Android : https://github.com/psmjazz/MiniPubSub-Android/tree/dev/0.1.1
-- iOS : https://github.com/psmjazz/MiniPubSub-iOS/tree/dev/0.1.1
+- Unity : https://github.com/minisdk/MiniPubSub-Unity/tree/dev/0.1.1/Packages/MiniPubSub
+- Unreal : https://github.com/minisdk/MiniPubSub-Unreal/tree/dev/0.1.0/Plugins/MiniPubSub
+- Android : https://github.com/minisdk/MiniPubSub-Android/tree/dev/0.1.1
+- iOS : https://github.com/minisdk/MiniPubSub-iOS/tree/dev/0.1.1
