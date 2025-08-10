@@ -6,8 +6,8 @@ jni 혹은 jni 래퍼 클래스를 사용하거나(안드로이드) c 라이브�
 MiniPubSub은 유니티/언리얼 엔진과 네이티브 sdk 사이에 통일된 인터페이스를 가진 통신 모듈로, 모바일 sdk들을 게임과 더 쉽고 빠르게 통합 할 목적으로 만들었습니다.  
 
 ## 구조
-<!-- <img src="./Images/MiniPubSub_Structure_flow.drawio.png" width="427" height="700"> -->
-![MiniPubSub_Sctucture](./Images/MiniPubSub_Structure_flow.drawio.png)
+<img src="./Images/MiniPubSub_Structure_flow.drawio.png" width="427" height="700">
+<!-- ![MiniPubSub_Sctucture](./Images/MiniPubSub_Structure_flow.drawio.png) -->
 
 ### 흐름
 1. Messenger 객체에 특정 키에 대해 Subscribe 를 하여 Message를 수신하도록 설정합니다.
@@ -94,9 +94,9 @@ Messenger 객체는 Publisher 객체를 상속하고 있습니다.
 // unreal sample
 FMessenger Messenger = FMessenger();
 
-Messenger.Subscribe(TEXT("InitResult"), FReceiveDelegate::CreateLambda([](TSharedPtr<const FMessage> Message)
+Messenger.Subscribe(TEXT("InitResult"), FReceiveDelegate::CreateLambda([](const FMessage& Message)
 {
-    TSharedPtr<const TMessage<FTest>> ResultMessage = TMessage<FResult>::Convert(Message);
+    FMyWorldData Data = Message.ToJsonSerializable<FMyWorldData>();
     // handle ResultMessage...
 }));
 
